@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../core/utils/styles.dart';
 import 'custom_app_bar.dart';
 import 'featured_book_list_view.dart';
 
@@ -7,13 +8,20 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [
-      CustomAppBar(),
-      FeaturedBookListView(),
-    ]);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const CustomAppBar(),
+        const FeaturedBookListView(),
+        const SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.only(left: 24),
+          child: Text(
+            'Best Seller',
+            style:Styles.titleMedium,
+          ),
+        ),
+      ],
+    );
   }
 }
-
-
-
-
