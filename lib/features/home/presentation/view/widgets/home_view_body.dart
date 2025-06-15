@@ -1,3 +1,4 @@
+import 'package:bookly/features/home/presentation/view/widgets/best_seller_list_view_item.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 import 'custom_app_bar.dart';
@@ -12,14 +13,22 @@ class HomeViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const CustomAppBar(),
-        const FeaturedBookListView(),
+        Padding(
+          padding: const EdgeInsets.only(left: 19),
+          child: const FeaturedBookListView(),
+        ),
         const SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.only(left: 24),
           child: Text(
             'Best Seller',
-            style:Styles.titleMedium,
+            style:Styles.textStyle18,
           ),
+        ),
+        const SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.only(left: 19),
+          child: const BestSellerListViewItem(),
         ),
       ],
     );
