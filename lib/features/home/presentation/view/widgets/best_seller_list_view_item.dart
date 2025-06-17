@@ -29,7 +29,7 @@ class BestSellerListViewItem extends StatelessWidget {
         ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.only(left: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -54,6 +54,7 @@ class BestSellerListViewItem extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                   const Spacer(),
                    const BookRatingItem(),
 
                   ],
