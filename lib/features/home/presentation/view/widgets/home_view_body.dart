@@ -14,30 +14,30 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:[
-               CustomAppBar(),
-               Padding(
-                 padding: EdgeInsets.only(left: 20),
-                 child: FeaturedBookListView(),
-               ),
-               SizedBox(height: 40),
+            children: [
+              CustomAppBar(),
               Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.only(left: 20),
+                child: FeaturedBookListView(),
+              ),
+              SizedBox(height: 40),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text('Best Seller', style: Styles.textStyle18),
               ),
-               SizedBox(height: 20),
+              SizedBox(height: 20),
             ],
           ),
         ),
-       SliverFillRemaining(
+        SliverFillRemaining(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal:20),
-            child: BestSellerLIstView(physics: const NeverScrollableScrollPhysics(),),
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: BestSellerLIstView(
+              physics: const NeverScrollableScrollPhysics(),
+            ),
           ),
         ),
       ],
     );
   }
 }
-
-

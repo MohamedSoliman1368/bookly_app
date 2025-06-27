@@ -11,9 +11,9 @@ class BooksDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: [
-        const CustomBookImage(),
+        const CustomBookImage(imageUrl: 'assets/images/Book 1 High (1).png'),
         const SizedBox(height: 30),
         Text(
           'The Jungle Book',

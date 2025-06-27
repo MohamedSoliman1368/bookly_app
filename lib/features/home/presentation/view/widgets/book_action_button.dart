@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 
 class BookActionButton extends StatelessWidget {
-  const BookActionButton({super.key, required this.text, required this.backgroundColor, required this.borderRadius, required this.textColor});
+  const BookActionButton({
+    super.key,
+    required this.text,
+    required this.backgroundColor,
+    required this.borderRadius,
+    required this.textColor,
+  });
   final String text;
   final Color backgroundColor;
   final BorderRadius borderRadius;
@@ -17,12 +23,7 @@ class BookActionButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: borderRadius),
         backgroundColor: backgroundColor,
       ),
-      child: Text(
-        text,
-        style: Styles.textStyle18.copyWith(
-          color: textColor,
-        ),
-      ),
+      child: Text(text, style: Styles.textStyle18.copyWith(color: textColor)),
     );
   }
 }

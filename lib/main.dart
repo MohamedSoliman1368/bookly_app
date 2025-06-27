@@ -9,6 +9,7 @@ import 'features/home/presentation/manger/featured_books_cubit/featured_books_cu
 import 'features/home/presentation/manger/newest_books_cubit/newest_books_cubit.dart';
 
 void main() {
+  setupGetIt();
   runApp(const BooklyApp());
 }
 
@@ -20,7 +21,9 @@ class BooklyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>()),
+          create: (context) =>
+              FeaturedBooksCubit(getIt.get<HomeRepoImpl>())
+                ..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) => NewsetBooksCubit(getIt.get<HomeRepoImpl>()),

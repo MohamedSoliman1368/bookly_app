@@ -9,7 +9,7 @@ class SearchViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10, left:20, right: 20),
+      padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -21,18 +21,21 @@ class SearchViewBody extends StatelessWidget {
               decoration: InputDecoration(
                 enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.white),
-                  ),
+                ),
                 focusedBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.white),
                 ),
                 hintText: 'Search',
                 hintStyle: const TextStyle(color: Colors.white),
-                suffixIcon: IconButton(onPressed: (){}, icon: const Icon(Icons.search,color: Colors.white,)),
+                suffixIcon: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.search, color: Colors.white),
+                ),
               ),
             ),
           ),
           const SizedBox(height: 20),
-          const Text('Result',style: Styles.textStyle18,),
+          const Text('Result', style: Styles.textStyle18),
           const SizedBox(height: 10),
           Expanded(child: const BestSellerLIstView()),
         ],

@@ -25,12 +25,8 @@ class BookDetailsBody extends StatelessWidget {
               ],
             ),
           ),
-
-        )]);
-
-
-
+        ),
+      ],
+    );
   }
 }
-
-
