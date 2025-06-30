@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import '../../../../home/presentation/view/widgets/best_seller_list_view.dart';
+import '../../../../home/presentation/view/widgets/Newst_books_list_view.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -37,7 +37,7 @@ class SearchViewBody extends StatelessWidget {
           const SizedBox(height: 20),
           const Text('Result', style: Styles.textStyle18),
           const SizedBox(height: 10),
-          Expanded(child: const BestSellerLIstView()),
+          Expanded(child: const NewstBooksLIstView()),
         ],
       ),
     );

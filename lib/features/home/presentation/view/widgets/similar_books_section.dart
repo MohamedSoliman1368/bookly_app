@@ -1,10 +1,10 @@
-import 'package:bookly/features/home/presentation/view/widgets/suggestion_list_view.dart';
+import 'package:bookly/features/home/presentation/view/widgets/similar_books_list_view.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../../../../core/utils/styles.dart';
 
-class SuggestionBooksSection extends StatelessWidget {
-  const SuggestionBooksSection({super.key});
+class SimilarBooksSection extends StatelessWidget {
+  const SimilarBooksSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class SuggestionBooksSection extends StatelessWidget {
           style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 10),
-        const SuggestionListView(),
+        const SimilarBooksListView(),
       ],
     );
   }
