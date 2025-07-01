@@ -21,7 +21,7 @@ class NewstBooksListViewItem extends StatelessWidget {
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.18,
-            child: CustomBookImage(imageUrl: book.volumeInfo.imageLinks.thumbnail,),
+            child: CustomBookImage(imageUrl: book.volumeInfo.imageLinks?.thumbnail??'',),
           ),
           Expanded(
             child: Padding(

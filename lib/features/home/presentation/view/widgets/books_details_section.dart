@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/launch_url.dart';
 import '../../../../../core/utils/styles.dart';
 import '../../../data/model/book_model/book_model.dart';
 import 'book_action_button.dart';
@@ -15,7 +16,7 @@ class BooksDetailsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomBookImage(imageUrl: book.volumeInfo.imageLinks.thumbnail),
+        CustomBookImage(imageUrl: book.volumeInfo.imageLinks?.thumbnail??''),
         const SizedBox(height: 30),
         Text(
           book.volumeInfo.title!,
@@ -32,9 +33,9 @@ class BooksDetailsSection extends StatelessWidget {
         const SizedBox(height: 10),
         const BookRatingItem(mainAxisAlignment: MainAxisAlignment.center),
         const SizedBox(height: 25),
-        const Row(
+        Row(
           children: [
-            Expanded(
+            const Expanded(
               child: BookActionButton(
                 text: ' Free ',
                 borderRadius: BorderRadius.only(
@@ -47,12 +48,15 @@ class BooksDetailsSection extends StatelessWidget {
             ),
             Expanded(
               child: BookActionButton(
+                onPressed: (){
+                  launchCustomUr(context, book.volumeInfo.previewLink);
+                },
                 text: 'preview',
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(12),
                   bottomRight: Radius.circular(12),
                 ),
-                backgroundColor: Color(0xffEF8262),
+                backgroundColor: const Color(0xffEF8262),
                 textColor: Colors.white,
               ),
             ),
